@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%;
+
+  
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.6em;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-color: lime;
+    
+    @include respond(sm) {
+        max-width: 540px;
+        background-color: red;
+    } 
+    @include respond(md) {
+        max-width: 720px;
+        background-color: orangered;
+    } 
+    @include respond(lg) {
+        max-width: 960px;
+        background-color: yellow;
+    } 
+    @include respond(xl) {
+        max-width: 1400px;
+        background-color: royalblue;
+    } 
+}

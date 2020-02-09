@@ -1,0 +1,18 @@
+// Media Query Manager
+@mixin respond($breakpoint) {
+    @if $breakpoint == xl {
+        @media screen and (min-width: 1200px) { @content };
+    }
+    
+    @if $breakpoint == lg {
+        @media screen and (min-width: 992px) { @content };
+    }
+    
+    @if $breakpoint == md {
+        @media screen and (min-width: 768px) { @content };
+    }
+
+    @if $breakpoint == sm {
+        @media screen and (min-width: 576px) { @content };
+    }
+}
