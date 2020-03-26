@@ -51,21 +51,25 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @mixin respond($breakpoint) {
 
-    /* Small devices (Phones, 576px and up) */
+    /* Small devices (Phones, 576px and less) */
     @if $breakpoint == xs {
-        @media only screen and (min-width: 36.125em) { @content };// screen is <= 576px / 16px = 36em
+        @media only screen and (max-width: 36.125em) { @content };// screen is <= 576px / 16px = 36em
     }
-    /* Small devices (tablets, 768px and up) */
+    /* Small devices (tablets, 768px and less) */
     @if $breakpoint == sm {
-        @media only screen and (min-width: 48em) { @content };//screen is <= 768px / 16px = 48em
+        @media only screen and (max-width: 48em) { @content };//screen is <= 768px / 16px = 48em
     }
-    /* Medium devices (desktops, 992px and up) */
+    /* Medium devices (desktops, 992px and less) */
     @if $breakpoint == md {
-        @media only screen and (min-width: 62em) { @content };//screen is <= 992px / 16px = 62em
+        @media only screen and (max-width: 62em) { @content };//screen is <= 992px / 16px = 62em
     }
-    /* Large devices (large desktops, 1200px and up) */
+    /* Large devices (large desktops, 1200px and less) */
     @if $breakpoint == lg {
-        @media only screen and (min-width: 75em) { @content };//screen is <= 1200px / 16px = 75em
+        @media only screen and (max-width: 75em) { @content };//screen is <= 1200px / 16px = 75em
+    }
+    /* Large devices (large desktops, 1200px and less) */
+    @if $breakpoint == xl {
+        @media only screen and (min-width: 112.5em) { @content };//screen is <= 1200px / 16px = 75em
     }
 
 
