@@ -14,6 +14,20 @@
 }
 
 
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@mixin backgroundDefault {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
@@ -37,19 +51,52 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @mixin respond($breakpoint) {
 
+    /* Small devices (Phones, 576px and up) */
     @if $breakpoint == xs {
-        @media only screen and (max-width: 36em) { @content };// screen is <= 576px / 16px = 36em
+        @media only screen and (min-width: 36.125em) { @content };// screen is <= 576px / 16px = 36em
     }
+    /* Small devices (tablets, 768px and up) */
     @if $breakpoint == sm {
-        @media only screen and (max-width: 48em) { @content };//screen is <= 768px / 16px = 48em
+        @media only screen and (min-width: 48em) { @content };//screen is <= 768px / 16px = 48em
     }
+    /* Medium devices (desktops, 992px and up) */
     @if $breakpoint == md {
-        @media only screen and (max-width: 62em) { @content };//screen is <= 992px / 16px = 62em
+        @media only screen and (min-width: 62em) { @content };//screen is <= 992px / 16px = 62em
     }
+    /* Large devices (large desktops, 1200px and up) */
     @if $breakpoint == lg {
         @media only screen and (min-width: 75em) { @content };//screen is <= 1200px / 16px = 75em
     }
+
+
+    /* ----------- iPad Pro ----------- */
+    @if $breakpoint == ipad-pro-portrait-landscape {
+        /* Portrait and Landscape */
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-height: 1366px) 
+        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+    }
+    @if $breakpoint == ipad-pro-portrait {
+        /* Portrait */
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-height: 1366px) 
+        and (orientation: portrait) 
+        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+   }
+
+   @if $breakpoint == ipad-pro-landscape {
+        /* Landscape */
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-height: 1366px) 
+        and (orientation: landscape) 
+        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+   }
+
 }
+
 // @mixin respond($breakpoint) {
 
 //     @if $breakpoint == xs {
