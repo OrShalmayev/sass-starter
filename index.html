@@ -52,9 +52,35 @@
             --gradient: linear-gradient(4deg, rgba(117, 17, 67, 1) 10%, rgba(224, 14, 32, 1) 100%);
             /*FONTS */
             --font-light-italic: 'SourceSansPro-LightItalic', sans-serif;
-            --font-regular:  'SourceSansPro-Regular', sans-serif;
+            --font-regular: 'SourceSansPro-Regular', sans-serif;
             --font-bold: 'SourceSansPro-Bold', sans-serif;
             --font-light: 'SourceSansPro-Light', sans-serif;
+            /* Default Font Sizes */
+            --btn-text: 15px;
+            --disclaimer-text: 13px;
+
+            /* Ipad Pro Font sizes (lg = 9px) */
+            --lg-headline: 7.222rem;
+            /* 65px / 9px */
+            --lg-sub-headline: 4.444rem;
+            /* 40px / 9px */
+            --lg-article-headline: 3.888rem;
+            /* 35px / 9px */
+            --lg-article-headline--2: 2.777rem;
+            /* 25px / 9px */
+
+            --lg-article-text: 2rem;
+            /*18px / 9 */
+
+            /* ipad Font sizes (md = 8px) */
+            --md-headline: 4.375rem;
+            /* 35px / 8px */
+            --md-sub-headline: 2.875rem;
+            /* 23px / 8px */
+            --md-article-headline: 2.875rem;
+            /* 23px / 8px */
+            --md-article-text: 2rem;
+            /*16px / 8px */
         }
     </style>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -62,7 +88,45 @@
 </head>
 
 <body>
-    <h1>Hello world</h1>
+
+<!--
+#=================FOOTER===================#
+-->
+    <footer class="footer">
+        <section class="footer__bottom">
+            <!-- footer__bottom__row -->
+            <div class="footer__bottom__row">
+                <!-- footer_bottom__powered-by -->
+                <div class="footer__bottom__powered-by">
+                    <div class="footer__bottom__university-logo"><img class="footer__bottom__university-logo-img"
+                            src="assets/img/njit-ico-WT.png" alt="university Logo"></div>
+                    <p class="footer__bottom__powered-by-text">Powered by</p>
+                    <div class="footer__bottom__hackeru-logo"><img class="footer__bottom__hackeru-logo-img"
+                            src="assets/img/hackeru-wt.png" alt="HackerU Logo"></div>
+                </div>
+                <!--END footer_bottom__powered-by -->
+
+                <!-- footer__bottom__copyright -->
+                <div class="footer__bottom__copyright">
+                    <p class="footer__bottom__copyright-text">
+                        Copyright © 2020 by New Jersey Institute of Technology
+                    </p>
+                </div>
+                <!--END footer__bottom__copyright -->
+
+                <!-- footer__bottom__privacy -->
+                <div class="footer__bottom__privacy">
+                    <a class="footer__bottom__privacy-link" href="https://www5.njit.edu/policies/privacy/"
+                        target="_blank" role="link">
+                        Privacy Policy.
+                    </a>
+                </div>
+                <!--END footer__bottom__privacy -->
+            </div>
+            <!--END footer__bottom__row -->
+        </section>
+        <!--END footer__bottom -->
+    </footer>
 </body>
 
 </html>

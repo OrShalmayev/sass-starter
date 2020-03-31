@@ -30,3 +30,35 @@
 //     font-family: Stag-Light;
 //     font-weight: 400;
 // }
+
+
+/*-------------------- 
+        article-paragraph
+-----------------*/
+.article-paragraph{
+    margin-top: 35px;
+    font-size: 2rem;
+    color: var(--color-6);
+}
+/*-------------------- 
+        disclaimer
+-----------------*/
+.disclaimer{
+    font-size: var(--disclaimer-text);
+    color: var(--color-6);
+
+    // disclaimer__link
+    &__link{
+        color: inherit;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    // diclaimer--2
+    &--2{
+        color: var(--color-1);
+    }
+
+}//END disclaimer
