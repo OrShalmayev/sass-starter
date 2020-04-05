@@ -1,45 +1,64 @@
+/*-------------------- 
+        Placeholders
+-----------------*/
+%headline-font-size{
+    font-size: 10rem;
+    /* Tablet Landscape max-width:1200px !font-size: 9px; */
+    @include respond(lg){
+        font-size: var(--md-headline);
+    }
+    /* Large Phone max-width:767px  !font-size: 8px;*/
+    @include respond(sm){
+        font-size: var(--sm-headline);
+    }
+}
 
-/* STAG
-================================================> */
-// @font-face{
-//     src: url('../../assets/fonts/stag/Stag-Bold.otf');
-//     font-family: Stag-Bold;
-//     font-weight: 700;
-// }
+%sub-headline-font-size{
+    font-size: 4.5rem;
+    /* Tablet Landscape max-width:1200px !font-size: 9px; */
+    @include respond(lg){
+        font-size: var(--md-sub-headline);
+    }
+    /* Large Phone max-width:767px  !font-size: 8px;*/
+    @include respond(sm){
+        font-size: var(--sm-sub-headline);
+    }
+}
 
-// @font-face{
-//     src: url('../../assets/fonts/stag/Stag-Boldtalic.otf');
-//     font-family: Stag-Boldtalic;
-//     font-weight: 700;
-// }
+%article-headline-font-size{
+    font-size: 4rem;
+    /* Tablet Landscape max-width:1200px !font-size: 9px; */
+    @include respond(lg){
+        font-size: var(--md-article-headline);
+    }
+    /* Large Phone max-width:767px  !font-size: 8px;*/
+    @include respond(sm){
+        font-size: var(--sm-article-headline);
+    }
+}
 
-// @font-face{
-//     src: url('../../assets/fonts/stag/Stag-Book.otf');
-//     font-family: Stag-Book;
-//     font-weight: 400;
-// }
-
-// @font-face{
-//     src: url('../../assets/fonts/stag/Stag-Booktalic.otf');
-//     font-family: Stag-Booktalic;
-//     font-weight: 400;
-// }
-
-// @font-face{
-//     src: url('../../assets/fonts/stag/Stag-Light.otf');
-//     font-family: Stag-Light;
-//     font-weight: 400;
-// }
-
+%article-text-font-size{
+    font-size: 1.8rem;
+    /* Tablet Landscape max-width:1200px !font-size: 9px; */
+    @include respond(lg){
+        font-size: var(--md-article-text);
+    }
+    /* Large Phone max-width:767px  !font-size: 8px;*/
+    @include respond(sm){
+        font-size: var(--sm-article-text);
+    }
+}
 
 /*-------------------- 
         article-paragraph
 -----------------*/
 .article-paragraph{
-    margin-top: 35px;
-    font-size: 2rem;
+    margin-top: 20px;
+    line-height: 1.2;
     color: var(--color-6);
+    @extend %article-text-font-size;
 }
+
 /*-------------------- 
         disclaimer
 -----------------*/
