@@ -51,45 +51,45 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @mixin respond($breakpoint) {
 
-    /* Small devices (Phones, 375px and less) */
+    // Small devices (Phones, 375px and less) */
     @if $breakpoint == xxs {
         @media only screen and (max-width:23.4375em) {@content};// screen is <= 375px / 16px = 23.4375
     }
-    /* Small devices (Phones, 576px and less) */
+    // Small devices (Phones, 576px and less) */
     @if $breakpoint == xs {
         @media only screen and (max-width: 36.125em) { @content };// screen is <= 576px / 16px = 36em
     }
-    /* Small devices (tablets, 767px and less) */
+    // Small devices (tablets, 767px and less) */
     @if $breakpoint == sm {
         @media only screen and (max-width: 47.93em) { @content };//screen is <= 767px / 16px = 47.93em
     }
-    /* Medium devices (desktops, 992px and less) */
+    // Medium devices (desktops, 992px and less) */
     @if $breakpoint == md {
         @media only screen and (max-width: 62em) { @content };//screen is <= 992px / 16px = 62em
     }
-    /* Large devices (large desktops, 1200px and less) */
+    // Large devices (large desktops, 1200px and less) */
     @if $breakpoint == lg {
         @media only screen and (max-width: 75em) { @content };//screen is <= 1200px / 16px = 75em
     }
-    /* Large devices (Laptops,   1024px - 1440px) */
-    @if $breakpoint == lenovo-yoga {
-        @media only screen and (min-width: 64em) and (max-width: 90em) { @content };//screen is > 1024px and < 1440px / 16px = 90em
+    // Large devices (Laptops,   1201px - 1440px) */
+    @if $breakpoint == laptops {
+        @media only screen and (min-width: 75.062em) and (max-width: 90em) { @content };//screen is >= 1201px and <= 1440px / 16px = 90em
     }
-    /* Large devices (large desktops, 1800px and up) */
+    // Large devices (large desktops, 1800px and up) */
     @if $breakpoint == xl {
         @media only screen and (min-width: 112.5em) { @content };//screen is <= 1200px / 16px = 75em
     }
 
-    /* ----------- iPad Pro ----------- */
+    // ----------- iPad Pro ----------- */
     @if $breakpoint == ipad-pro-portrait-landscape {
-        /* Portrait and Landscape */
+        // Portrait and Landscape */
         @media only screen 
         and (min-width: 1024px) 
         and (max-height: 1366px) 
         and (-webkit-min-device-pixel-ratio: 1.5) {@content};
     }
     @if $breakpoint == ipad-pro-portrait {
-        /* Portrait */
+        // Portrait */
         @media only screen 
         and (min-width: 1024px) 
         and (max-height: 1366px) 
@@ -98,7 +98,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
    }
 
    @if $breakpoint == ipad-pro-landscape {
-        /* Landscape */
+        // Landscape */
         @media only screen 
         and (min-width: 1024px) 
         and (max-height: 1366px) 
