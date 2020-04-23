@@ -17,24 +17,34 @@
             src: url('assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf');
             font-family: 'SourceSansPro-Regular';
             font-weight: 400;
+            font-display: swap;
+            /*
+                Instructs the browser to use the fallback font to display the text until the custom font has fully downloaded. This is also known as a “flash of unstyled text” or FOUT.
+            */
         }
 
         @font-face {
             src: url('assets/fonts/source_sans_pro/SourceSansPro-LightItalic.ttf');
             font-family: 'SourceSansPro-LightItalic';
             font-weight: 900;
+            font-display: swap;
+
         }
 
         @font-face {
             src: url('assets/fonts/source_sans_pro/SourceSansPro-Bold.ttf');
             font-family: 'SourceSansPro-Bold';
             font-weight: 900;
+            font-display: swap;
+
         }
 
         @font-face {
             src: url('assets/fonts/source_sans_pro/SourceSansPro-Light.ttf');
             font-family: 'SourceSansPro-Light';
             font-weight: 300;
+            font-display: swap;
+
         }
 
         /*-------------------- 

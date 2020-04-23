@@ -71,9 +71,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == lg {
         @media only screen and (max-width: 75em) { @content };//screen is <= 1200px / 16px = 75em
     }
-    // Large devices (Laptops,   1201px - 1600px) */
+    // Large devices (Laptops,   1440px) */
     @if $breakpoint == laptops {
-        @media only screen and (min-width: 1200px) and (max-width: 1600px) and (max-height:900px) { @content };//screen is >= 1200px and <= 1600px and height <=900px
+        @media only screen and (min-width: 90em){ @content };//screen is <= 1440px / 16px = 90em
     }
     // Large devices (large desktops, 1800px and up) */
     @if $breakpoint == xl {

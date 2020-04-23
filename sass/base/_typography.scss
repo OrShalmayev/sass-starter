@@ -1,4 +1,17 @@
 /*-------------------- 
+        Font To Import
+-----------------*/
+// @font-face {
+//     src: url('assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf');
+//     font-family: 'SourceSansPro-Regular';
+//     font-weight: 400;
+//     font-display: swap;
+//     /* Swap
+//         Instructs the browser to use the fallback font to display the text until the custom font has fully downloaded. This is also known as a “flash of unstyled text” or FOUT.
+//     */
+// }
+
+/*-------------------- 
         Placeholders
 -----------------*/
 %headline-font-size{
@@ -81,3 +94,6 @@
     }
 
 }//END disclaimer
+
+
+
