@@ -54,6 +54,37 @@ $u4: unit($max-font-size);
     }
 }
 }
+
+
+/*-------------------- 
+        arrow
+        referer: https://www.developerdrive.com/10-best-sass-mixins-for-web-developers/
+-----------------*/
+/* SCSS */
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+    width: 0;
+    height: 0;
+    @if ($direction == left) {
+       border-top: $size solid transparent;
+       border-bottom: $size solid transparent; 
+       border-right: $size solid $color;
+    }
+    @else if ($direction == right) {
+       border-top: $size solid transparent;
+       border-bottom: $size solid transparent; 
+       border-left: $size solid $color;
+    }
+    @else if ($direction == down) {
+       border-left: $size solid transparent;
+       border-right: $size solid transparent;
+       border-top: $size solid $color;
+    }
+    @else {
+       border-left: $size solid transparent;
+       border-right: $size solid transparent;
+       border-bottom: $size solid $color;
+    }
+ }
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

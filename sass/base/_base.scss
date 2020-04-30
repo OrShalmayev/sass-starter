@@ -23,6 +23,9 @@ html {
 body {
     box-sizing: border-box;
     line-height: 1.2;
+    // font size at 300px is 16px. 
+    // 300px - 1800px font size is increasing depend on the screen size until 26px.
+    // because it's the max we set.
     @include fluid-type(300px, 1800px, 16px, 26px);
 }
 
