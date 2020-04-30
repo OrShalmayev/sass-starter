@@ -22,8 +22,8 @@ html {
 
 body {
     box-sizing: border-box;
-    line-height: 1;
+    line-height: 1.2;
+    @include fluid-type(300px, 1800px, 16px, 26px);
 }
-
 
 

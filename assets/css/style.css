@@ -1,5 +1,9 @@
 /* ABSTRACTS
 ================================================> */
+/*-------------------- 
+        FLUID TYPE 
+        REFERER: https://css-tricks.com/snippets/css/fluid-typography/
+-----------------*/
 /*
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
@@ -18,14 +22,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-:root {
-  --color-one: #d8531e;
-  --color-two: #e6a514;
-  --color-three: #00512f;
-  --color-four: #000000;
-  --color-five: #ffffff;
-  --color-six: #f7f7f7; }
-
 /* BASE
 ================================================> */
 * {
@@ -38,23 +34,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  /* Small devices (Phones, 375px and less) */
-  /* Small devices (Phones, 576px and less) */
-  /* Small devices (tablets, 767px and less) */
-  /* Medium devices (desktops, 992px and less) */
-  /* Large devices (large desktops, 1200px and less) */
-  /* Large devices (Laptops,   1024px - 1440px) */
-  /* Large devices (large desktops, 1800px and up) */
-  /* ----------- iPad Pro ----------- */
-  /* Small devices (Phones, 375px and less) */
-  /* Small devices (Phones, 576px and less) */
-  /* Small devices (tablets, 767px and less) */
-  /* Medium devices (desktops, 992px and less) */
-  /* Large devices (large desktops, 1200px and less) */
-  /* Large devices (Laptops,   1024px - 1440px) */
-  /* Large devices (large desktops, 1800px and up) */
-  /* ----------- iPad Pro ----------- */ }
+  font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -64,17 +44,43 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
-  line-height: 1; }
+  line-height: 1.2; }
+  body {
+    font-size: 16px; }
+    @media screen and (min-width: 300px) {
+      body {
+        font-size: calc(16px + 10 * ((100vw - 300px) / 1500)); } }
+    @media screen and (min-width: 1800px) {
+      body {
+        font-size: 26px; } }
 
-/* STAG
-================================================> */
+/*-------------------- 
+        Font To Import
+        Resource: https://font-display.glitch.me/
+        Note:
+        This depends a lot on how you are using your webfont, and whether rendering the text in a fallback font makes sense. For example, if you're rendering the main body text on a site, you should use font-display:optional. On browsers that implement it (all modern browsers at the time of updating this article in 2019) the experience will be much nicer: your users will get fast content, and if the web font download takes too long, they won't get a page relayout halfway through reading your article.
+        If you're using a web font for icons, there is no acceptable fallback font you can render these icons in (unless you're using emoji or something), so your only option is to completely block until the font is ready, with font-display:block.
+-----------------*/
+/*-------------------- 
+        Placeholders
+-----------------*/
+.article-paragraph {
+  font-size: 1.8rem;
+  /* Tablet Landscape max-width:1200px !font-size: 9px; */
+  /* Large Phone max-width:767px  !font-size: 8px;*/ }
+  @media only screen and (max-width: 75em) {
+    .article-paragraph {
+      font-size: var(--md-article-text); } }
+  @media only screen and (max-width: 47.93em) {
+    .article-paragraph {
+      font-size: var(--sm-article-text); } }
+
 /*-------------------- 
         article-paragraph
 -----------------*/
 .article-paragraph {
-  margin-top: 35px;
-  font-size: 2rem;
+  margin-top: 20px;
+  line-height: 1.2;
   color: var(--color-6); }
 
 /*-------------------- 
@@ -219,23 +225,44 @@ a:not([href]):not([tabindex]):focus {
   background-color: #e9ecef;
   opacity: 1; }
 
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #212529;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/*-------------------- 
+        ICONS
+-----------------*/
+.icon {
+  max-width: 20px;
+  width: 20px;
+  max-height: 20px;
+  height: 20px;
+  fill: var(--color-2); }
+
+.icon-box {
+  display: inline-flex;
+  align-items: center; }
+  .icon-box-phone {
+    margin-right: 40px; }
+  .icon-box-social:not(:last-of-type) {
+    margin-right: 10px; }
+  .icon-box__anchor {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: var(--color-2);
+    text-decoration: none; }
+    .icon-box__anchor:hover {
+      text-decoration: underline; }
+  .icon-box__icon {
+    max-width: 50px;
+    margin-right: 10px; }
 
 .btn {
   display: inline-block;
@@ -253,7 +280,78 @@ a:not([href]):not([tabindex]):focus {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  cursor: pointer;
+  appearance: none;
+  opacity: 1; }
+
+.bottom-form {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  /* Tablet Portrait max-width:992px !font-size: 8px; */
+  /* Large Phone max-width:767px  !font-size: 8px;*/ }
+  @media only screen and (max-width: 62em) {
+    .bottom-form {
+      min-height: 500px; } }
+  @media only screen and (max-width: 47.93em) {
+    .bottom-form {
+      min-height: 600px; } }
+  .bottom-form__row {
+    display: flex; }
+  .bottom-form__top {
+    position: relative;
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    /* Tablet Landscape max-width:1200px !font-size: 9px; */
+    /* Tablet Portrait max-width:992px !font-size: 8px; */
+    /* Large Phone max-width:767px  !font-size: 8px;*/
+    /* MD - SM Phone max-width:576px !font-size: 8px;**/ }
+    .bottom-form__top > *:not(:last-child) {
+      margin-bottom: 30px; }
+    @media only screen and (max-width: 75em) {
+      .bottom-form__top {
+        max-width: 100%;
+        flex: 0 0 100%; } }
+    @media only screen and (max-width: 62em) {
+      .bottom-form__top {
+        min-height: 400px;
+        justify-content: space-evenly; } }
+    @media only screen and (max-width: 47.93em) {
+      .bottom-form__top {
+        min-height: 375px; } }
+    @media only screen and (max-width: 36.125em) {
+      .bottom-form__top {
+        min-height: 450px; } }
+  .bottom-form__form {
+    display: flex;
+    /* Tablet Portrait max-width:992px !font-size: 8px; */ }
+    @media only screen and (max-width: 62em) {
+      .bottom-form__form {
+        flex-direction: column; } }
+  .bottom-form__group {
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding-right: 5px;
+    /* Tablet Portrait max-width:992px !font-size: 8px; */ }
+    @media only screen and (max-width: 62em) {
+      .bottom-form__group {
+        max-width: 100%;
+        flex: 0 0 100%; } }
+  .bottom-form-headline {
+    align-self: center;
+    line-height: 1;
+    /* Tablet Portrait max-width:992px !font-size: 8px; */ }
+    @media only screen and (max-width: 62em) {
+      .bottom-form-headline {
+        text-align: center; } }
 
 /* LAYOUT
 ================================================> */
