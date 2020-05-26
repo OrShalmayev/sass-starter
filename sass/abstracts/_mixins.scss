@@ -1,39 +1,39 @@
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
 }
 
 @mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
 @mixin flexCenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 
 @mixin backgroundDefault {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-/*-------------------- 
-        FLUID TYPE 
-        REFERER: https://css-tricks.com/snippets/css/fluid-typography/
+/*--------------------
+      FLUID TYPE
+      REFERER: https://css-tricks.com/snippets/css/fluid-typography/
 -----------------*/
 @function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
+  @return $value / ($value * 0 + 1);
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -43,48 +43,48 @@ $u3: unit($min-font-size);
 $u4: unit($max-font-size);
 
 @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-    font-size: $min-font-size;
-    @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-    }
-    @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-    }
-    }
+  & {
+  font-size: $min-font-size;
+  @media screen and (min-width: $min-vw) {
+      font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+  }
+  @media screen and (min-width: $max-vw) {
+      font-size: $max-font-size;
+  }
+  }
 }
 }
 
 
-/*-------------------- 
-        arrow
-        referer: https://www.developerdrive.com/10-best-sass-mixins-for-web-developers/
+/*--------------------
+      arrow
+      referer: https://www.developerdrive.com/10-best-sass-mixins-for-web-developers/
 -----------------*/
 /* SCSS */
 @mixin arrow($direction: down, $size: 5px, $color: #555) {
-    width: 0;
-    height: 0;
-    @if ($direction == left) {
-       border-top: $size solid transparent;
-       border-bottom: $size solid transparent; 
-       border-right: $size solid $color;
-    }
-    @else if ($direction == right) {
-       border-top: $size solid transparent;
-       border-bottom: $size solid transparent; 
-       border-left: $size solid $color;
-    }
-    @else if ($direction == down) {
-       border-left: $size solid transparent;
-       border-right: $size solid transparent;
-       border-top: $size solid $color;
-    }
-    @else {
-       border-left: $size solid transparent;
-       border-right: $size solid transparent;
-       border-bottom: $size solid $color;
-    }
- }
+  width: 0;
+  height: 0;
+  @if ($direction == left) {
+     border-top: $size solid transparent;
+     border-bottom: $size solid transparent;
+     border-right: $size solid $color;
+  }
+  @else if ($direction == right) {
+     border-top: $size solid transparent;
+     border-bottom: $size solid transparent;
+     border-left: $size solid $color;
+  }
+  @else if ($direction == down) {
+     border-left: $size solid transparent;
+     border-right: $size solid transparent;
+     border-top: $size solid $color;
+  }
+  @else {
+     border-left: $size solid transparent;
+     border-right: $size solid transparent;
+     border-bottom: $size solid $color;
+  }
+}
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
@@ -108,78 +108,59 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @mixin respond($breakpoint) {
 
-    // Small devices (Small Phones, 375px and less) */
-    @if $breakpoint == xxs {
-        @media only screen and (max-width:23.4375em) {@content};// screen is <= 375px / 16px = 23.4375
-    }
-    // Small devices (Medium Phones, 576px and less) */
-    @if $breakpoint == xs {
-        @media only screen and (max-width: 36.125em) { @content };// screen is <= 576px / 16px = 36em
-    }
-    // Small devices (Large Phones, 767px and less) */
-    @if $breakpoint == sm {
-        @media only screen and (max-width: 47.93em) { @content };//screen is <= 767px / 16px = 47.93em
-    }
-    // Medium devices (Ipad, 992px and less) */
-    @if $breakpoint == md {
-        @media only screen and (max-width: 62em) { @content };//screen is <= 992px / 16px = 62em
-    }
-    // Large devices (Ipad Pro, 1200px and less) */
-    @if $breakpoint == lg {
-        @media only screen and (max-width: 75em) { @content };//screen is <= 1200px / 16px = 75em
-    }
-    // Large devices (Laptops,   1440px) */
-    @if $breakpoint == laptops {
-        @media only screen and (min-width: 90em){ @content };//screen is <= 1440px / 16px = 90em
-    }
-    // Large devices (large desktops, 1800px and up) */
-    @if $breakpoint == xl {
-        @media only screen and (min-width: 112.5em) { @content };//screen is <= 1200px / 16px = 75em
-    }
+  // Small devices (Small Phones, 375px and less) */
+  @if $breakpoint == xxs {
+      @media only screen and (max-width:23.4375em) {@content};// screen is <= 375px / 16px = 23.4375
+  }
+  // Small devices (Medium Phones, 576px and less) */
+  @if $breakpoint == xs {
+      @media only screen and (max-width: 36.125em) { @content };// screen is <= 576px / 16px = 36em
+  }
+  // Small devices (Large Phones, 767px and less) */
+  @if $breakpoint == sm {
+      @media only screen and (max-width: 47.93em) { @content };//screen is <= 767px / 16px = 47.93em
+  }
+  // Medium devices (Ipad, 992px and less) */
+  @if $breakpoint == md {
+      @media only screen and (max-width: 62em) { @content };//screen is <= 992px / 16px = 62em
+  }
+  // Large devices (Ipad Pro, 1024px and less) */
+  @if $breakpoint == lg {
+      @media only screen and (max-width: 64em) { @content };//screen is <= 1024px / 16px = 64em
+  }
+  // Large devices (Laptops,   1440px) */
+  @if $breakpoint == laptops {
+      @media only screen and (min-width: 90em){ @content };//screen is <= 1440px / 16px = 90em
+  }
+  // Large devices (large desktops, 1800px and up) */
+  @if $breakpoint == xl {
+      @media only screen and (min-width: 112.5em) { @content };//screen is <= 1200px / 16px = 75em
+  }
 
-    // ----------- iPad Pro ----------- */
-    @if $breakpoint == ipad-pro-portrait-landscape {
-        // Portrait and Landscape */
-        @media only screen 
-        and (min-width: 1024px) 
-        and (max-height: 1366px) 
-        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
-    }
-    @if $breakpoint == ipad-pro-portrait {
-        // Portrait */
-        @media only screen 
-        and (min-width: 1024px) 
-        and (max-height: 1366px) 
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
-   }
+  // ----------- iPad Pro ----------- */
+  @if $breakpoint == ipad-pro-portrait-landscape {
+      // Portrait and Landscape */
+      @media only screen
+      and (min-width: 1024px)
+      and (max-height: 1366px)
+      and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+  }
+  @if $breakpoint == ipad-pro-portrait {
+      // Portrait */
+      @media only screen
+      and (min-width: 1024px)
+      and (max-height: 1366px)
+      and (orientation: portrait)
+      and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+ }
 
-   @if $breakpoint == ipad-pro-landscape {
-        // Landscape */
-        @media only screen 
-        and (min-width: 1024px) 
-        and (max-height: 1366px) 
-        and (orientation: landscape) 
-        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
-   }
+ @if $breakpoint == ipad-pro-landscape {
+      // Landscape */
+      @media only screen
+      and (min-width: 1024px)
+      and (max-height: 1366px)
+      and (orientation: landscape)
+      and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+ }
 
 }
-
-// @mixin respond($breakpoint) {
-
-//     @if $breakpoint == xs {
-//         @media only screen and (max-width: 31.25em) { @content };    // 500px / 16px = 31.25em
-//     }
-//     @if $breakpoint == sm {
-//         @media only screen and (max-width: 37.5em) { @content };     //600px / 16px = 37.5em
-//     }
-//     @if $breakpoint == md {
-//         @media only screen and (max-width: 56.25em) { @content };    //900px / 16px = 56.25em
-//     }
-//     @if $breakpoint == lg {
-//         @media only screen and (max-width: 68.75em) { @content };    //1100px / 16px = 68.75em
-//     }
-//     @if $breakpoint == xl {
-//         @media only screen and (min-width: 75) { @content };    //1200px / 16px = 75em
-//     }
-// }
