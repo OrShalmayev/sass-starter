@@ -1,7 +1,9 @@
+// useage: map-get($font-weights, "book");
 $font-weights: (
     "thin": 100,
     "extra-light": 200,
     "light": 300,
+    "book": 350,
     "regular": 400,
     "medium": 500,
     "semi-bold": 600,
