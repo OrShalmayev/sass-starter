@@ -1,10 +1,23 @@
 /*-------------------- 
-        Font To Import
-        Resource: https://font-display.glitch.me/
-        Note:
-        This depends a lot on how you are using your webfont, and whether rendering the text in a fallback font makes sense. For example, if you're rendering the main body text on a site, you should use font-display:optional. On browsers that implement it (all modern browsers at the time of updating this article in 2019) the experience will be much nicer: your users will get fast content, and if the web font download takes too long, they won't get a page relayout halfway through reading your article.
-        If you're using a web font for icons, there is no acceptable fallback font you can render these icons in (unless you're using emoji or something), so your only option is to completely block until the font is ready, with font-display:block.
------------------*/
+    Font To Import
+    Resource: https://font-display.glitch.me/
+    Note:
+    This depends a lot on how you are using your webfont, and whether rendering the text in a fallback font makes sense. For example, if you're rendering the main body text on a site, you should use font-display:optional. On browsers that implement it (all modern browsers at the time of updating this article in 2019) the experience will be much nicer: your users will get fast content, and if the web font download takes too long, they won't get a page relayout halfway through reading your article.
+    If you're using a web font for icons, there is no acceptable fallback font you can render these icons in (unless you're using emoji or something), so your only option is to completely block until the font is ready, with font-display:block.
+
+    Font Weights:
+    light: 300
+    book: 350
+    regular: 400
+    medium: 500
+    bold: 600
+    ExtraBold: 650
+    UltraBold: 700
+    black:800
+    ExtraBlack: 900
+    UltraBlack:999
+    -----------------*/
+
 // @font-face {
 //     src: url('assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf');
 //     font-family: 'SourceSansPro-Regular';
