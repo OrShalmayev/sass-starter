@@ -4,18 +4,6 @@
     Note:
     This depends a lot on how you are using your webfont, and whether rendering the text in a fallback font makes sense. For example, if you're rendering the main body text on a site, you should use font-display:optional. On browsers that implement it (all modern browsers at the time of updating this article in 2019) the experience will be much nicer: your users will get fast content, and if the web font download takes too long, they won't get a page relayout halfway through reading your article.
     If you're using a web font for icons, there is no acceptable fallback font you can render these icons in (unless you're using emoji or something), so your only option is to completely block until the font is ready, with font-display:block.
-
-    Font Weights:
-    light: 300
-    book: 350
-    regular: 400
-    medium: 500
-    bold: 600
-    ExtraBold: 650
-    UltraBold: 700
-    black:800
-    ExtraBlack: 900
-    UltraBlack:999
     -----------------*/
 
 // @font-face {
@@ -34,12 +22,10 @@
 %headline-font-size {
     font-size: 10rem;
 
-    /* Tablet Landscape max-width:1200px !font-size: 9px; */
     @include respond(lg) {
         font-size: var(--md-headline);
     }
 
-    /* Large Phone max-width:767px  !font-size: 8px;*/
     @include respond(sm) {
         font-size: var(--sm-headline);
     }
@@ -48,12 +34,10 @@
 %sub-headline-font-size {
     font-size: 4.5rem;
 
-    /* Tablet Landscape max-width:1200px !font-size: 9px; */
     @include respond(lg) {
         font-size: var(--md-sub-headline);
     }
 
-    /* Large Phone max-width:767px  !font-size: 8px;*/
     @include respond(sm) {
         font-size: var(--sm-sub-headline);
     }
@@ -62,12 +46,10 @@
 %article-headline-font-size {
     font-size: 4rem;
 
-    /* Tablet Landscape max-width:1200px !font-size: 9px; */
     @include respond(lg) {
         font-size: var(--md-article-headline);
     }
 
-    /* Large Phone max-width:767px  !font-size: 8px;*/
     @include respond(sm) {
         font-size: var(--sm-article-headline);
     }
@@ -76,12 +58,10 @@
 %article-text-font-size {
     font-size: 1.8rem;
 
-    /* Tablet Landscape max-width:1200px !font-size: 9px; */
     @include respond(lg) {
         font-size: var(--md-article-text);
     }
 
-    /* Large Phone max-width:767px  !font-size: 8px;*/
     @include respond(sm) {
         font-size: var(--sm-article-text);
     }
@@ -101,16 +81,14 @@
 /* -------------------- 
         article-paragraph
 ----------------- */
-.article-paragraph {
-    margin-top: 20px;
-    line-height: 1.2;
+.para{
     color: var(--color-6);
     @extend %article-text-font-size;
 }
 
-/*-------------------- 
+/* -------------------- 
         disclaimer
------------------*/
+----------------- */
 .disclaimer {
     font-size: var(--disclaimer-text);
     color: var(--color-6);
@@ -131,5 +109,3 @@
     }
 
 }
-
-//END disclaimer

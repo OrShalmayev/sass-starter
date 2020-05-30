@@ -11,8 +11,8 @@
 html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
-    // scroll-behavior: smooth;
-    @include respond(lg){ // width < 1200 ?
+
+    @include respond(lg){ // width <= 1024px ?
         font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25
     }
     @include respond(md){// width < 900 ?
@@ -31,7 +31,7 @@ body {
     // font size at 300px is 16px. 
     // 300px - 1800px font size is increasing depend on the screen size until 26px.
     // because it's the max we set.
-    @include fluid-type(300px, 1800px, 16px, 26px);
+    @include fluid-type(300px, 1800px, 16px, 20px);
 }
 
 
