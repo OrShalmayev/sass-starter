@@ -1,11 +1,23 @@
-// Font Weights:
-$fw-thin: 100;
-$fw-extra-light: 200;
-$fw-light: 300;
-$fw-book: 350;
-$fw-regular: 400;
-$fw-medium: 500;
-$fw-semi-bold: 600;
-$fw-bold: 700;
-$fw-extra-bold: 800;
-$fw-black: 900;
+$font-weights: (
+    "thin": 100,
+    "extra-light": 200,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "black": 900
+);
+
+// // Font Weights:
+// $fw-thin: 100;
+// $fw-extra-light: 200;
+// $fw-light: 300;
+// $fw-book: 350;
+// $fw-regular: 400;
+// $fw-medium: 500;
+// $fw-semi-bold: 600;
+// $fw-bold: 700;
+// $fw-extra-bold: 800;
+// $fw-black: 900;
