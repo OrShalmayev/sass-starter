@@ -1,0 +1,14 @@
+%blocks-padding-y {
+  padding-top: $dsk-padding-y;
+  padding-bottom: $dsk-padding-y;
+
+  @include respond(lg) {
+    padding-top: $ipro-padding-y;
+    padding-bottom: $ipro-padding-y;
+  }
+
+  @include respond(xs) {
+    padding-top: $mob-padding-y;
+    padding-bottom: $mob-padding-y;
+  }
+}
