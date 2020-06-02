@@ -95,86 +95,66 @@
 
   // Small devices (Small Phones, 375px and less) */
   @if $breakpoint==xxs {
-    @media only screen and (max-width:23.4375em) {
+    @media only screen and (max-width: 23.4375em) {
       @content;
-    }
-
-    // screen is <= 375px / 16px = 23.4375
+    } // screen is <= 375px / 16px = 23.4375
   }
 
   // Small devices (Medium Phones, 576px and less) */
   @if $breakpoint==xs {
     @media only screen and (max-width: 36.125em) {
-      @content;
+      @content; // screen is <= 576px / 16px = 36em
     }
-
-    // screen is <= 576px / 16px = 36em
   }
 
-  // Small devices (Large Phones, 767px and less) */
+  // Small devices (landscape Phones, 768px and less) */
   @if $breakpoint==sm {
-    @media only screen and (max-width: 47.93em) {
-      @content;
+    @media only screen and (max-width: 48em) {
+      @content; //screen is <= 768px / 16px = 47.93em
     }
-
-    //screen is <= 767px / 16px = 47.93em
   }
 
   // Medium devices (Ipad, 992px and less) */
   @if $breakpoint==md {
     @media only screen and (max-width: 62em) {
-      @content;
+      @content; //screen is <= 992px / 16px = 62em
     }
-
-    //screen is <= 992px / 16px = 62em
   }
 
   // Large devices (Ipad Pro, 1024px and less) */
   @if $breakpoint==lg {
     @media only screen and (max-width: 64em) {
-      @content;
+      @content; //screen is <= 1024px / 16px = 64em
     }
+  }
 
-    //screen is <= 1024px / 16px = 64em
+  //  ( 1280 and less) */
+  @if $breakpoint==xl {
+    @media only screen and (max-width: 80em) {
+      @content; //screen is <= 1280px / 16px = 80em
+    }
   }
 
   // Large devices (Laptops,   1440px) */
   @if $breakpoint==laptops {
-    @media only screen and (min-width: 90em) {
-      @content;
+    @media only screen and (max-width: 90em) {
+      @content; //screen is <= 1440px / 16px = 90em
     }
-
-    //screen is <= 1440px / 16px = 90em
   }
-
-  // 1200px  */
-  @if $breakpoint==xl {
-    @media only screen and (min-width: 75em) {
-      @content;
-    }
-
-    //screen is <= 1200px / 16px = 75em
-  }
-
-
 
   // Large devices (large desktops, 1800px and up) */
   @if $breakpoint==xxl {
     @media only screen and (min-width: 112.5em) {
-      @content;
+      @content; //screen is >= 1800px / 16px = 112em
     }
-
-    //screen is <= 1200px / 16px = 75em
   }
 
   // ----------- iPad Pro ----------- */
   @if $breakpoint==ipad-pro-portrait-landscape {
-
     // Portrait and Landscape */
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
       @content;
     }
-
   }
 
   @if $breakpoint==ipad-pro-portrait {
@@ -183,7 +163,6 @@
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
       @content;
     }
-
   }
 
   @if $breakpoint==ipad-pro-landscape {
@@ -192,7 +171,5 @@
     @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
       @content;
     }
-
   }
-
 }
