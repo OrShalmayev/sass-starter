@@ -142,6 +142,14 @@
     }
   }
 
+  
+  // Large laptops (Large Laptops,   1680px) */
+  @if $breakpoint==lg-laptops {
+    @media only screen and (max-width: 105em) {
+      @content; //screen is <= 1680px / 16px = 105em
+    }
+  }
+  
   // Large devices (large desktops, 1800px and up) */
   @if $breakpoint==xxl {
     @media only screen and (min-width: 112.5em) {
