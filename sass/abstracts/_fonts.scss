@@ -1,0 +1,30 @@
+
+/* -------------------- 
+    Stag
+----------------- */
+@font-face {
+    src: url("../../assets/fonts/stag/Stag-Book.woff2");
+    font-family: 'Stag';
+    font-weight: $fw-book;
+    font-display: swap; }
+
+  @font-face {
+    src: url("../../assets/fonts/stag/Stag-Bold.woff2");
+    font-family: 'Stag';
+    font-weight: $fw-bold;
+    font-display: swap; }
+
+/* -------------------- 
+    Stag Sans
+----------------- */
+@font-face {
+    src: url("../../assets/fonts/stag_sans/StagSans-Book.woff2");
+    font-family: 'StagSans';
+    font-weight: $fw-book;
+    font-display: swap; }
+
+  @font-face {
+    src: url("../../assets/fonts/stag_sans/StagSans-Bold.woff2");
+    font-family: 'StagSans';
+    font-weight: $fw-bold;
+    font-display: swap; }
