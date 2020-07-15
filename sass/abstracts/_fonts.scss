@@ -1,3 +1,4 @@
+// Note: fonts folder needs to match the font name decalred in variables
 @each $key,$val in $fonts{
   @font-face {
     src: url("../../assets/fonts/#{$val}/#{$val}-Bold.woff2");
