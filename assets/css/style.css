@@ -1,27 +1,62 @@
 /* ABSTRACTS
 ================================================> */
-/*-------------------- 
-        FLUID TYPE 
-        REFERER: https://css-tricks.com/snippets/css/fluid-typography/
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+@font-face {
+  src: url("../../assets/fonts/Microgramma_Com/Microgramma_Com-Bold.woff2");
+  font-family: "Microgramma_Com";
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/Microgramma_Com/Microgramma_Com-Book.woff2");
+  font-family: "Microgramma_Com";
+  font-weight: 350;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/OpenSans/OpenSans-Bold.woff2");
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/OpenSans/OpenSans-Book.woff2");
+  font-family: "OpenSans";
+  font-weight: 350;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/Stag/Stag-Bold.woff2");
+  font-family: "Stag";
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/Stag/Stag-Book.woff2");
+  font-family: "Stag";
+  font-weight: 350;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/StagSans/StagSans-Bold.woff2");
+  font-family: "StagSans";
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  src: url("../../assets/fonts/StagSans/StagSans-Book.woff2");
+  font-family: "StagSans";
+  font-weight: 350;
+  font-display: swap; }
+
+/*--------------------
+      FLUID TYPE
+      REFERER: https://css-tricks.com/snippets/css/fluid-typography/
 -----------------*/
-/*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-
-$breakpoint arguement choices:
-- xs
-- sm
-- md
-- lg
-- xl
-
-ORDER: Base + typography > general layout + grid > page layout > components
-
-1em = 16px
-*/
+/*--------------------
+      arrow
+      referer: https://www.developerdrive.com/10-best-sass-mixins-for-web-developers/
+-----------------*/
 /* BASE
 ================================================> */
 * {
@@ -35,7 +70,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 64em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 62em) {
@@ -44,58 +79,206 @@ html {
 
 body {
   box-sizing: border-box;
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   body {
     font-size: 16px; }
     @media screen and (min-width: 300px) {
       body {
-        font-size: calc(16px + 10 * ((100vw - 300px) / 1500)); } }
+        font-size: calc(16px + 4 * ((100vw - 300px) / 1500)); } }
     @media screen and (min-width: 1800px) {
       body {
-        font-size: 26px; } }
+        font-size: 20px; } }
 
-/*-------------------- 
-        Font To Import
-        Resource: https://font-display.glitch.me/
-        Note:
-        This depends a lot on how you are using your webfont, and whether rendering the text in a fallback font makes sense. For example, if you're rendering the main body text on a site, you should use font-display:optional. On browsers that implement it (all modern browsers at the time of updating this article in 2019) the experience will be much nicer: your users will get fast content, and if the web font download takes too long, they won't get a page relayout halfway through reading your article.
-        If you're using a web font for icons, there is no acceptable fallback font you can render these icons in (unless you're using emoji or something), so your only option is to completely block until the font is ready, with font-display:block.
------------------*/
-/*-------------------- 
-        Placeholders
------------------*/
-.article-paragraph {
-  font-size: 1.8rem;
-  /* Tablet Landscape max-width:1200px !font-size: 9px; */
-  /* Large Phone max-width:767px  !font-size: 8px;*/ }
-  @media only screen and (max-width: 75em) {
-    .article-paragraph {
-      font-size: var(--md-article-text); } }
-  @media only screen and (max-width: 47.93em) {
-    .article-paragraph {
-      font-size: var(--sm-article-text); } }
+/* --------------------
+    HEADLINES PLACEHOLDERS
+----------------- */
+.headline--1 {
+  font-size: 8rem; }
+  @media only screen and (max-width: 64em) {
+    .headline--1 {
+      font-size: 6.111rem; } }
+  @media only screen and (max-width: 48em) {
+    .headline--1 {
+      font-size: 3.25rem; } }
 
-/*-------------------- 
-        article-paragraph
------------------*/
-.article-paragraph {
-  margin-top: 20px;
-  line-height: 1.2;
-  color: var(--color-6); }
+.headline--2 {
+  font-size: 11rem; }
+  @media only screen and (max-width: 64em) {
+    .headline--2 {
+      font-size: 7.222rem; } }
+  @media only screen and (max-width: 48em) {
+    .headline--2 {
+      font-size: 4.375rem; } }
 
-/*-------------------- 
+.headline--3 {
+  font-size: 7rem; }
+  @media only screen and (max-width: 64em) {
+    .headline--3 {
+      font-size: 4.5rem; } }
+  @media only screen and (max-width: 48em) {
+    .headline--3 {
+      font-size: 3.75rem; } }
+
+.headline--4 {
+  font-size: 3.5rem; }
+  @media only screen and (max-width: 64em) {
+    .headline--4 {
+      font-size: 4rem; } }
+  @media only screen and (max-width: 48em) {
+    .headline--4 {
+      font-size: 3rem; } }
+
+.headline {
+  font-weight: 400;
+  font-family: "OpenSans"; }
+  .headline--1 {
+    font-weight: 700; }
+  .headline--2 {
+    font-weight: 700; }
+  .headline--3 {
+    color: #043657; }
+    .headline--3--bold {
+      font-weight: 700; }
+  .headline--4 {
+    letter-spacing: 0.7px;
+    color: #424c5d; }
+
+/* --------------------
+    ARTICLE HEADLINE PLACEHOLDERS
+----------------- */
+.article-headline--1, .article-headline--5 {
+  font-size: 4.6rem; }
+  @media only screen and (max-width: 64em) {
+    .article-headline--1, .article-headline--5 {
+      font-size: 3.5rem; } }
+  @media only screen and (max-width: 48em) {
+    .article-headline--1, .article-headline--5 {
+      font-size: 2.875rem; } }
+
+.article-headline--2 {
+  font-size: 4.7rem; }
+  @media only screen and (max-width: 64em) {
+    .article-headline--2 {
+      font-size: 3.6rem; } }
+  @media only screen and (max-width: 48em) {
+    .article-headline--2 {
+      font-size: 2.975rem; } }
+
+.article-headline--3 {
+  font-size: 2.3rem; }
+  @media only screen and (max-width: 64em) {
+    .article-headline--3 {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 48em) {
+    .article-headline--3 {
+      font-size: 2.475rem; } }
+
+.article-headline--4 {
+  font-size: 2.6rem; }
+  @media only screen and (max-width: 64em) {
+    .article-headline--4 {
+      font-size: 2.3rem; } }
+  @media only screen and (max-width: 48em) {
+    .article-headline--4 {
+      font-size: 2.775rem; } }
+
+.article-headline--6 {
+  font-size: 3.6rem; }
+  @media only screen and (max-width: 64em) {
+    .article-headline--6 {
+      font-size: 4rem; } }
+  @media only screen and (max-width: 48em) {
+    .article-headline--6 {
+      font-size: 3rem; } }
+
+/* --------------------
+    .article-headline
+----------------- */
+.article-headline--1 {
+  font-family: "Microgramma_Com";
+  font-weight: 800;
+  letter-spacing: 0.92px;
+  color: #8cc6ec; }
+
+.article-headline--2 {
+  font-family: "OpenSans";
+  font-weight: 400;
+  letter-spacing: 0.92px;
+  color: #424c5d; }
+
+.article-headline--3 {
+  font-family: "OpenSans";
+  font-weight: 800;
+  letter-spacing: 2.3px;
+  color: #0c1a2d; }
+
+.article-headline--4 {
+  font-family: "OpenSans";
+  font-weight: 800;
+  letter-spacing: 0.56px;
+  color: #0c1a2d; }
+
+.article-headline--5 {
+  font-family: "OpenSans";
+  font-weight: 400;
+  color: #043657; }
+
+.article-headline--6 {
+  font-family: "OpenSans";
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  color: #1e439b; }
+
+/* --------------------
+    PARAGRAPHS PLACEHOLDERS
+----------------- */
+.para--1 {
+  font-size: 2rem; }
+  @media only screen and (max-width: 64em) {
+    .para--1 {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 48em) {
+    .para--1 {
+      font-size: 2rem; } }
+
+.para--2 {
+  font-size: 2.2rem; }
+  @media only screen and (max-width: 64em) {
+    .para--2 {
+      font-size: 2.2rem; } }
+  @media only screen and (max-width: 48em) {
+    .para--2 {
+      font-size: 2.2rem; } }
+
+/* --------------------
+    para
+----------------- */
+.para {
+  font-family: "OpenSans";
+  font-weight: 400;
+  color: #333; }
+  .para--1 {
+    letter-spacing: 0.63px; }
+  .para--2 {
+    font-weight: 800;
+    letter-spacing: 2.2px; }
+
+/* --------------------
         disclaimer
------------------*/
+----------------- */
 .disclaimer {
-  font-size: var(--disclaimer-text);
-  color: var(--color-6); }
+  font-size: var(--disclaimer-text); }
+  .disclaimer-container {
+    margin-top: 20px;
+    text-align: center; }
   .disclaimer__link {
     color: inherit;
     text-decoration: none; }
     .disclaimer__link:hover {
       text-decoration: underline; }
-  .disclaimer--2 {
-    color: var(--color-1); }
 
 /* COMPONENTS
 ================================================> */
@@ -276,14 +459,16 @@ a:not([href]):not([tabindex]):focus {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
+  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   cursor: pointer;
   appearance: none;
-  opacity: 1; }
+  opacity: 1;
+  outline: none;
+  white-space: nowrap; }
 
 .bottom-form {
   position: relative;
@@ -297,7 +482,7 @@ a:not([href]):not([tabindex]):focus {
   @media only screen and (max-width: 62em) {
     .bottom-form {
       min-height: 500px; } }
-  @media only screen and (max-width: 47.93em) {
+  @media only screen and (max-width: 48em) {
     .bottom-form {
       min-height: 600px; } }
   .bottom-form__row {
@@ -316,7 +501,7 @@ a:not([href]):not([tabindex]):focus {
     /* MD - SM Phone max-width:576px !font-size: 8px;**/ }
     .bottom-form__top > *:not(:last-child) {
       margin-bottom: 30px; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 64em) {
       .bottom-form__top {
         max-width: 100%;
         flex: 0 0 100%; } }
@@ -324,7 +509,7 @@ a:not([href]):not([tabindex]):focus {
       .bottom-form__top {
         min-height: 400px;
         justify-content: space-evenly; } }
-    @media only screen and (max-width: 47.93em) {
+    @media only screen and (max-width: 48em) {
       .bottom-form__top {
         min-height: 375px; } }
     @media only screen and (max-width: 36.125em) {

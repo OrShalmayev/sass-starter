@@ -51,7 +51,7 @@
 
 .headline {
   font-weight: $fw-regular;
-  font-family: $font-OpenSans;
+  font-family: map-get($fonts, "Secondary");
 
   &--1 {
     @extend %headline-1-fs;
@@ -153,7 +153,7 @@
   &--1 {
     @extend %article-headline-1-fs;
 
-    font-family: $font-microgramma;
+    font-family: map-get($fonts, "Primary");
     font-weight: $fw-extra-bold;
     letter-spacing: 0.92px;
     color: $color-3;
@@ -162,7 +162,7 @@
   &--2 {
     @extend %article-headline-2-fs;
 
-    font-family: $font-OpenSans;
+    font-family: map-get($fonts, "Secondary");
     font-weight: $fw-regular;
     letter-spacing: 0.92px;
     color: $color-5;
@@ -171,7 +171,7 @@
   &--3 {
     @extend %article-headline-3-fs;
 
-    font-family: $font-OpenSans;
+    font-family: map-get($fonts, "Secondary");
     font-weight: $fw-extra-bold;
     letter-spacing: 2.3px;
     color: $color-1;
@@ -180,7 +180,7 @@
   &--4 {
     @extend %article-headline-4-fs;
 
-    font-family: $font-OpenSans;
+    font-family: map-get($fonts, "Secondary");
     font-weight: $fw-extra-bold;
     letter-spacing: 0.56px;
     color: $color-1;
@@ -189,7 +189,7 @@
   &--5 {
     @extend %article-headline-1-fs;
 
-    font-family: $font-OpenSans;
+    font-family: map-get($fonts, "Secondary");
     font-weight: $fw-regular;
     color: $color-2;
   }
@@ -197,7 +197,7 @@
   &--6 {
     @extend %article-headline-6-fs;
 
-    font-family: $font-OpenSans;
+    font-family: map-get($fonts, "Secondary");
     font-weight: $fw-regular;
     letter-spacing: 0.72px;
     color: $color-4;
@@ -236,7 +236,7 @@
 ----------------- */
 
 .para {
-  font-family: $font-OpenSans;
+  font-family: map-get($fonts, "Secondary");
   font-weight: $fw-regular;
   color: $text-color-dark;
 
