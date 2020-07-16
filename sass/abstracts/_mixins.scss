@@ -13,7 +13,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 @mixin flexCenter {
   display: flex;
   justify-content: center;
@@ -21,6 +20,19 @@
   text-align: center;
 }
 
+@mixin isFontExists($font) {
+  @if variable-exists($font) {
+    font-family: $font;
+  }
+
+  @else if variable-exists(font-Secondary) {
+    font-family: $font-Secondary;
+  }
+
+  @else {
+    font-family: $font-Primary;
+  }
+}
 
 @mixin backgroundDefault {
   background-repeat: no-repeat;
