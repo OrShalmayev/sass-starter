@@ -1,3 +1,9 @@
-@function pageImage($filename) {
-  @return '#{$image-path}#{$filename}';
+@function get_image($filename: null, $pageFolder: null, $image-path: "../images/") {
+  @if ($filename != null) {
+    @return "#{$image-path}#{$pageFolder}#{$filename}";
+  }
+
+  @else {
+    @return $default_bg;
+  }
 }
