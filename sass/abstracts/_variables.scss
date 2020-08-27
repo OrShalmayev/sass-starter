@@ -1,18 +1,20 @@
+$default_bg: "https://via.placeholder.com/1800/0000FF/808080";
+$blocks_bg:  "https://via.placeholder.com/1000/FFFF00/000000";
+
 //===BreakPoints===
-$xxxs:360px;
 $xxs:375px;
 $xs:576px;
-$sm:768px;
+$sm:760px;
 $md:992px;
 $lg:1024px;
 $xl: 1280px;
 $xxl:1800px;
 
 $fonts: (
-    "Primary": "Microgramma_Com",
-    "Secondary": "OpenSans",
-    "Tertiary": "Stag",
-    "quaternary": "StagSans"
+    "1": "Microgramma_Com",
+    "2": "OpenSans",
+    "3": "Stag",
+    "4": "StagSans"
 );
 
 //===Font Weights===
@@ -28,24 +30,17 @@ $fw-extra-bold: 800;
 $fw-black: 900;
 
 // ===Colors===
-$color-1:#0c1a2d;
-$color-2:#043657;
-$color-3:#8cc6ec;
-$color-4:#1e439b;
-$color-5: #424c5d;
-$color-6:#83898f;
-$bg-gray: #eee;
-// === Default Colors===
+$color-1:#e67629;
+$color-2:#97a321;
+$color-3:#015030;
+$color-4:#5888b4;
 $text-color-dark:#333;
-$color-light: #fff;
 $text-color-light:#fff;
-$color-primary: #0275d8;
-$color-success: #5cb85c;
-$color-info: #5bc0de;
-$color-warning: #f0ad4e;
+$bg-gray:#eee;
+
+// Default colors
 $color-danger: #d9534f;
-$color-inverse: #292b2c;
-$color-faded: #f7f7f7;
+
 // ===Text Sizes===
 $disclaimer-text: 13px;
 
@@ -57,40 +52,77 @@ $dsk-headline--4: 3.5rem;
 $dsk-article-headline-1: 4.6rem;
 $dsk-article-headline-2: 4.7rem;
 $dsk-article-headline-3: 2.3rem;
-$dsk-article-headline-4: 2.6rem;
+$dsk-article-headline-4: 3.6rem;
 $dsk-article-headline-6: 3.6rem;
 $dsk-article-paragraph-1: 2rem;
 $dsk-article-paragraph-2: 2.2rem;
+
+// Laptop 1280px
+$lap-headline--1: 6rem;
+$lap-headline--2: 8rem;
+
 // ipad pro text sizes
 $ipro-headline--1: 6.111rem; //55px / 9px
 $ipro-headline--2: 7.222rem; //65px / 9px
-$ipro-headline--3: 4.5rem; // 45px / 9px
+$ipro-headline--3: 6.5rem; // 45px / 9px
 $ipro-headline--4: 4rem; // ? / 9px
 $ipro-article-headline-1: 3.5rem; //35px / 9px
-$ipro-article-headline-2: 3.6rem; //36px / 9px
+$ipro-article-headline-2: 3rem; //36px / 9px
 $ipro-article-headline-3: 2rem; // ? / 9px
 $ipro-article-headline-4: 2.3rem; // ? / 9px
 $ipro-article-headline-6: 4rem; // ? / 9px
 $ipro-article-paragraph-1: 2rem; // 20px / 9px
 $ipro-article-paragraph-2: 2.2rem; // ? / 9px
 // mobile  text sizes
-$mob-headline--1: 3.25rem; // 26px / 8px
-$mob-headline--2: 4.375rem; // 35px / 8px
+$mob-headline--1: 4rem; // 30 / 8px
+$mob-headline--2: 5rem; // 40px / 8px
 $mob-headline--3: 3.75rem; // 30px / 8px
-$mob-headline--4: 3rem; // ? / 8px
-$mob-article-headline-1: 2.875rem; // 23px / 8px
+$mob-headline--4: 2.25rem; // 18 / 8px
+$mob-article-headline-1: 3.75rem; // 30px / 8px
 $mob-article-headline-2: 2.975rem; // 24px / 8px
-$mob-article-headline-3: 2.475rem; // ? / 8px
-$mob-article-headline-4: 2.775rem; // ? / 8px
+$mob-article-headline-3: 2rem; // 16 / 8px
+$mob-article-headline-4: 2.275rem; // ? / 8px
 $mob-article-headline-6: 3rem; // ? / 8px
 $mob-article-paragraph-1: 2rem; // 16px / 8px
-$mob-article-paragraph-2: 2.2rem; // ? / 8px
+$mob-article-paragraph-2: 2rem; // 16px / 8px
 
 // ===Spacing===
 $dsk-padding-y:50px;
-$ipro-padding-y:30px;
+$ipro-padding-y:40px;
 $mob-padding-y:20px;
+$container-padding-x--mob:30px;
 
-/** Bootstrap navbar fix (https://git.io/fADqW) */
-$navbar-dark-toggler-icon-bg: none;
-$navbar-light-toggler-icon-bg: none;
+$box-shadow--1: 0 8px 15px rgba(51, 51, 51, 0.2);
+
+$p-margin-b: 2rem;
+$elm-margin-y: 2rem;
+
+%image-animation {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+%article-not-last-margin {
+  & > *:not(:first-child):not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+%space-between-widgets-y {
+  margin-bottom: 3rem;
+}
+
+@mixin left-line($width: 7px, $height: 50px, $bgc: $color-1) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $bgc;
+}
+
