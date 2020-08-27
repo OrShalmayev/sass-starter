@@ -28,6 +28,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     // font size at 300px is 16px. 
     // 300px - 1800px font size is increasing depend on the screen size until 26px.
     // because it's the max we set.
@@ -35,3 +36,8 @@ body {
 }
 
 
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
