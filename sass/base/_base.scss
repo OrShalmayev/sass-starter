@@ -32,7 +32,9 @@ body {
     // font size at 300px is 16px. 
     // 300px - 1800px font size is increasing depend on the screen size until 26px.
     // because it's the max we set.
+    content-visibility: auto;
     @include fluid-type(300px, 1800px, 16px, 20px);
+    
 }
 
 
