@@ -149,8 +149,8 @@
 
   // Large devices (Laptops,   1440px) */
   @if $breakpoint==laptops {
-    @media only screen and (max-width: 90em) {
-      @content; //screen is <= 1440px / 16px = 90em
+    @media only screen and (max-width: 96.25em) {
+      @content; //screen is <= 1540px / 16px = 96.25em
     }
   }
 
