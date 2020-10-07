@@ -12,6 +12,10 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
+  @include respond(laptops) {
+    font-size: 45.25%;
+  }
+    
     @include respond(lg){ // width <= 1024px ?
         font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25
     }
