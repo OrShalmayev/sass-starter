@@ -151,6 +151,74 @@
   }
 }
 
+
+@mixin squares($directionY, $directionX, $hasSecond: false, $color1: $color-2,$color2: $color-2, $scale: 1, $background:#fff ) {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid $color1;
+    position: absolute;
+    z-index: -1;
+    background-color: $background;
+
+    @if $directionY==bottom {
+      top: 1rem * $scale;
+    } @else if $directionY==top {
+      bottom: 1rem * $scale;
+    }
+
+    @if $directionX==right {
+      left: 1rem * $scale;
+    } @else if $directionX==left {
+      right: 1rem * $scale;
+    }
+
+  }
+
+  @if $hasSecond==true {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color2;
+      position: absolute;
+      z-index: -2;
+      background-color: $background;
+
+      @if $directionY==bottom {
+        top: 2rem * $scale;
+      } @else if $directionY==top {
+        bottom: 2rem * $scale;
+      }
+
+      @if $directionX==right {
+        left: 2rem * $scale;
+      } @else if $directionX==left {
+        right: 2rem * $scale;
+      }
+    }
+  }
+}
+
+@mixin decorate($image, $height: 125%, $width: 110%, $top: 0, $right: 0) {
+ position: relative;
+
+ &::after {
+    background-image: url($image);
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: $top;
+    right: $right;
+    width: $width;
+    height: $height;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+
 @mixin respond($breakpoint) {
 
   // Small devices (Small Phones, 375px and less) */
