@@ -1,14 +1,23 @@
 /* --------------------
-    HEADLINES PLACEHOLDERS
+  HEADLINES PLACEHOLDERS
 ----------------- */
+
 %headline-1-fs {
   font-size: $dsk-headline--1;
+
+  @include respond(laptops) {
+    font-size: $lap-headline--1;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-headline--1;
+  }
 
   @include respond(lg) {
     font-size: $ipro-headline--1;
   }
 
-  @include respond(sm) {
+  @include respond(xs) {
     font-size: $mob-headline--1;
   }
 }
@@ -16,84 +25,43 @@
 %headline-2-fs {
   font-size: $dsk-headline--2;
 
+  @include respond(laptops) {
+    font-size: $lap-headline--2;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-headline--2;
+  }
+
   @include respond(lg) {
     font-size: $ipro-headline--2;
   }
 
-  @include respond(sm) {
+  @include respond(xs) {
     font-size: $mob-headline--2;
   }
 }
 
-%headline-3-fs {
-  font-size: $dsk-headline--3;
-
-  @include respond(lg) {
-    font-size: $ipro-headline--3;
-  }
-
-  @include respond(sm) {
-    font-size: $mob-headline--3;
-  }
-}
-
-%headline-4-fs {
-  font-size: $dsk-headline--4;
-
-  @include respond(lg) {
-    font-size: $ipro-headline--4;
-  }
-
-  @include respond(sm) {
-    font-size: $mob-headline--4;
-  }
-}
-
-.headline {
-  font-weight: $fw-regular;
-  font-family: map-get($fonts, "Secondary");
-
-  &--1 {
-    @extend %headline-1-fs;
-
-    font-weight: $fw-bold;
-  }
-
-  &--2 {
-    @extend %headline-2-fs;
-
-    font-weight: $fw-bold;
-  }
-
-  &--3 {
-    @extend %headline-3-fs;
-
-    color: $color-2;
-
-    &--bold {
-      font-weight: $fw-bold;
-    }
-  }
-
-  &--4 {
-    @extend %headline-4-fs;
-
-    letter-spacing: 0.7px;
-    color: $color-5;
-  }
-}
-
-/* --------------------
-    ARTICLE HEADLINE PLACEHOLDERS
------------------ */
 %article-headline-1-fs {
   font-size: $dsk-article-headline-1;
+
+  @include respond(laptops) {
+    font-size: $lap-article-headline-1;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-headline-1;
+  }
 
   @include respond(lg) {
     font-size: $ipro-article-headline-1;
   }
 
-  @include respond(sm) {
+  @include respond(md) {
+    font-size: $ip-article-headline-1;
+  }
+
+  @include respond(xs) {
     font-size: $mob-article-headline-1;
   }
 }
@@ -101,11 +69,23 @@
 %article-headline-2-fs {
   font-size: $dsk-article-headline-2;
 
+  @include respond(laptops) {
+    font-size: $lap-article-headline-2;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-headline-2;
+  }
+
   @include respond(lg) {
     font-size: $ipro-article-headline-2;
   }
 
-  @include respond(sm) {
+  @include respond(md) {
+    font-size: $ip-article-headline-2;
+  }
+
+  @include respond(xs) {
     font-size: $mob-article-headline-2;
   }
 }
@@ -113,108 +93,50 @@
 %article-headline-3-fs {
   font-size: $dsk-article-headline-3;
 
+  @include respond(laptops) {
+    font-size: $lap-article-headline-3;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-headline-3;
+  }
+
   @include respond(lg) {
     font-size: $ipro-article-headline-3;
   }
 
-  @include respond(sm) {
+  @include respond(md) {
+    font-size: $ip-article-headline-3;
+  }
+
+  @include respond(xs) {
     font-size: $mob-article-headline-3;
   }
 }
 
-%article-headline-4-fs {
-  font-size: $dsk-article-headline-4;
-
-  @include respond(lg) {
-    font-size: $ipro-article-headline-4;
-  }
-
-  @include respond(sm) {
-    font-size: $mob-article-headline-4;
-  }
-}
-
-%article-headline-6-fs {
-  font-size: $dsk-article-headline-6;
-
-  @include respond(lg) {
-    font-size: $ipro-article-headline-6;
-  }
-
-  @include respond(sm) {
-    font-size: $mob-article-headline-6;
-  }
-}
-
 /* --------------------
-    .article-headline
------------------ */
-.article-headline {
-  &--1 {
-    @extend %article-headline-1-fs;
-
-    font-family: map-get($fonts, "Primary");
-    font-weight: $fw-extra-bold;
-    letter-spacing: 0.92px;
-    color: $color-3;
-  }
-
-  &--2 {
-    @extend %article-headline-2-fs;
-
-    font-family: map-get($fonts, "Secondary");
-    font-weight: $fw-regular;
-    letter-spacing: 0.92px;
-    color: $color-5;
-  }
-
-  &--3 {
-    @extend %article-headline-3-fs;
-
-    font-family: map-get($fonts, "Secondary");
-    font-weight: $fw-extra-bold;
-    letter-spacing: 2.3px;
-    color: $color-1;
-  }
-
-  &--4 {
-    @extend %article-headline-4-fs;
-
-    font-family: map-get($fonts, "Secondary");
-    font-weight: $fw-extra-bold;
-    letter-spacing: 0.56px;
-    color: $color-1;
-  }
-
-  &--5 {
-    @extend %article-headline-1-fs;
-
-    font-family: map-get($fonts, "Secondary");
-    font-weight: $fw-regular;
-    color: $color-2;
-  }
-
-  &--6 {
-    @extend %article-headline-6-fs;
-
-    font-family: map-get($fonts, "Secondary");
-    font-weight: $fw-regular;
-    letter-spacing: 0.72px;
-    color: $color-4;
-  }
-}
-
-/* --------------------
-    PARAGRAPHS PLACEHOLDERS
+    Parahraphs
 ----------------- */
 %para-1-fs {
   font-size: $dsk-article-paragraph-1;
+
+  @include respond(laptops) {
+    font-size: $lap-article-paragraph-1;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-paragraph-1;
+  }
 
   @include respond(lg) {
     font-size: $ipro-article-paragraph-1;
   }
 
-  @include respond(sm) {
+  @include respond(md) {
+    font-size: $ip-article-paragraph-1;
+  }
+
+  @include respond(xs) {
     font-size: $mob-article-paragraph-1;
   }
 }
@@ -222,58 +144,212 @@
 %para-2-fs {
   font-size: $dsk-article-paragraph-2;
 
+  @include respond(laptops) {
+    font-size: $lap-article-paragraph-2;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-paragraph-2;
+  }
+
   @include respond(lg) {
     font-size: $ipro-article-paragraph-2;
   }
 
-  @include respond(sm) {
+  @include respond(md) {
+    font-size: $ip-article-paragraph-2;
+  }
+
+  @include respond(xs) {
     font-size: $mob-article-paragraph-2;
   }
 }
 
-/* --------------------
-    para
------------------ */
+%para-3-fs {
+  font-size: $dsk-article-paragraph-3;
+
+  @include respond(laptops) {
+    font-size: $lap-article-paragraph-3;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-paragraph-3;
+  }
+
+  @include respond(lg) {
+    font-size: $ipro-article-paragraph-3;
+  }
+
+  @include respond(md) {
+    font-size: $ip-article-paragraph-3;
+  }
+
+  @include respond(xs) {
+    font-size: $mob-article-paragraph-3;
+  }
+}
+
+%para-4-fs {
+  font-size: $dsk-article-paragraph-4;
+
+  @include respond(laptops) {
+    font-size: $lap-article-paragraph-4;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-article-paragraph-4;
+  }
+
+  @include respond(lg) {
+    font-size: $ipro-article-paragraph-4;
+  }
+
+  @include respond(md) {
+    font-size: $ip-article-paragraph-4;
+  }
+
+  @include respond(xs) {
+    font-size: $mob-article-paragraph-4;
+  }
+}
 
 .para {
-  font-family: map-get($fonts, "Secondary");
-  font-weight: $fw-regular;
-  color: $text-color-dark;
+  font-family: $font-1;
 
   &--1 {
-    letter-spacing: 0.63px;
-
     @extend %para-1-fs;
   }
 
   &--2 {
     @extend %para-2-fs;
-
-    font-weight: $fw-extra-bold;
-    letter-spacing: 2.2px;
   }
 }
+
+%btn-1-fs {
+  font-size: $dsk-btn-fs;
+
+  @include respond(laptops) {
+    font-size: $lap-btn-fs;
+  }
+
+  @include respond(xl) {
+    font-size: $xl-btn-fs;
+  }
+
+  @include respond(lg) {
+    font-size: $ipro-btn-fs;
+  }
+
+  @include respond(xs) {
+    font-size: $mob-btn-fs;
+  }
+}
+
+%border-1-fs {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color-1;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+}
+
+
+%fs-handler {
+  /* --------------------
+      HEADLINES
+  ----------------- */
+
+  & *[class*="-h--1"] {
+    @extend %headline-1-fs;
+
+    font-weight: $fw-light;
+    font-family: $font-2;
+    line-height: 1.1;
+  }
+
+  & *[class*="-h--2"] {
+    @extend %headline-2-fs;
+
+    font-weight: $fw-book;
+    font-family: $font-2;
+  }
+
+  /* --------------------
+    Article Headlines
+  ----------------- */
+  & *[class*="-ah--1"] {
+    @extend %article-headline-1-fs;
+
+    font-family: $font-2;
+    font-weight: $fw-light;
+    color: $color-3;
+    line-height: 1;
+  }
+
+  & *[class*="-ah--2"] {
+    @extend %article-headline-2-fs;
+
+    font-family: $font-2;
+    font-weight: $fw-book;
+    color: $color-1;
+
+    & + p {
+      margin-top: 2rem;
+    }
+  }
+
+  & *[class*="-ah--3"] {
+    @extend %article-headline-3-fs;
+
+    font-weight: $fw-bold;
+  }
+
+  /* --------------------
+      Paragraphs
+  ----------------- */
+  & *[class*="-p--1"] {
+    @extend %para-1-fs;
+
+    color: $text-color;
+  }
+
+  & *[class*="-p--2"] {
+    @extend %para-2-fs;
+  }
+
+  & *[class*="-p--3"] {
+    @extend %para-3-fs;
+  }
+
+  & *[class*="-p--4"] {
+    @extend %para-4-fs;
+
+    font-family: $font-2;
+  }
+
+  & *[class*="disclaimer"] {
+    letter-spacing: 0.24px;
+  }
+}
+
+div,
+section,
+article {
+  @extend %fs-handler;
+}
+
 
 /* --------------------
         disclaimer
 ----------------- */
 .disclaimer {
-  font-size: var(--disclaimer-text);
+  font-size: $disclaimer-text;
 
-  &-container {
-    margin-top: 20px;
-    text-align: center;
+  & *[href] {
+    color: currentColor;
   }
-
-  // disclaimer__link
-  &__link {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-//END disclaimer
+} //END disclaimer
