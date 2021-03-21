@@ -5,14 +5,6 @@
 %headline-1-fs {
   font-size: $dsk-headline--1;
 
-  @include respond(laptops) {
-    font-size: $lap-headline--1;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-headline--1;
-  }
-
   @include respond(lg) {
     font-size: $ipro-headline--1;
   }
@@ -22,95 +14,15 @@
   }
 }
 
-%headline-2-fs {
-  font-size: $dsk-headline--2;
-
-  @include respond(laptops) {
-    font-size: $lap-headline--2;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-headline--2;
-  }
-
-  @include respond(lg) {
-    font-size: $ipro-headline--2;
-  }
-
-  @include respond(xs) {
-    font-size: $mob-headline--2;
-  }
-}
-
 %article-headline-1-fs {
   font-size: $dsk-article-headline-1;
-
-  @include respond(laptops) {
-    font-size: $lap-article-headline-1;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-headline-1;
-  }
 
   @include respond(lg) {
     font-size: $ipro-article-headline-1;
   }
 
-  @include respond(md) {
-    font-size: $ip-article-headline-1;
-  }
-
   @include respond(xs) {
     font-size: $mob-article-headline-1;
-  }
-}
-
-%article-headline-2-fs {
-  font-size: $dsk-article-headline-2;
-
-  @include respond(laptops) {
-    font-size: $lap-article-headline-2;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-headline-2;
-  }
-
-  @include respond(lg) {
-    font-size: $ipro-article-headline-2;
-  }
-
-  @include respond(md) {
-    font-size: $ip-article-headline-2;
-  }
-
-  @include respond(xs) {
-    font-size: $mob-article-headline-2;
-  }
-}
-
-%article-headline-3-fs {
-  font-size: $dsk-article-headline-3;
-
-  @include respond(laptops) {
-    font-size: $lap-article-headline-3;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-headline-3;
-  }
-
-  @include respond(lg) {
-    font-size: $ipro-article-headline-3;
-  }
-
-  @include respond(md) {
-    font-size: $ip-article-headline-3;
-  }
-
-  @include respond(xs) {
-    font-size: $mob-article-headline-3;
   }
 }
 
@@ -120,20 +32,8 @@
 %para-1-fs {
   font-size: $dsk-article-paragraph-1;
 
-  @include respond(laptops) {
-    font-size: $lap-article-paragraph-1;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-paragraph-1;
-  }
-
   @include respond(lg) {
     font-size: $ipro-article-paragraph-1;
-  }
-
-  @include respond(md) {
-    font-size: $ip-article-paragraph-1;
   }
 
   @include respond(xs) {
@@ -144,20 +44,8 @@
 %para-2-fs {
   font-size: $dsk-article-paragraph-2;
 
-  @include respond(laptops) {
-    font-size: $lap-article-paragraph-2;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-paragraph-2;
-  }
-
   @include respond(lg) {
     font-size: $ipro-article-paragraph-2;
-  }
-
-  @include respond(md) {
-    font-size: $ip-article-paragraph-2;
   }
 
   @include respond(xs) {
@@ -168,20 +56,8 @@
 %para-3-fs {
   font-size: $dsk-article-paragraph-3;
 
-  @include respond(laptops) {
-    font-size: $lap-article-paragraph-3;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-paragraph-3;
-  }
-
   @include respond(lg) {
     font-size: $ipro-article-paragraph-3;
-  }
-
-  @include respond(md) {
-    font-size: $ip-article-paragraph-3;
   }
 
   @include respond(xs) {
@@ -189,60 +65,8 @@
   }
 }
 
-%para-4-fs {
-  font-size: $dsk-article-paragraph-4;
-
-  @include respond(laptops) {
-    font-size: $lap-article-paragraph-4;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-article-paragraph-4;
-  }
-
-  @include respond(lg) {
-    font-size: $ipro-article-paragraph-4;
-  }
-
-  @include respond(md) {
-    font-size: $ip-article-paragraph-4;
-  }
-
-  @include respond(xs) {
-    font-size: $mob-article-paragraph-4;
-  }
-}
-
-.para {
-  font-family: $font-1;
-
-  &--1 {
-    @extend %para-1-fs;
-  }
-
-  &--2 {
-    @extend %para-2-fs;
-  }
-}
-
 %btn-1-fs {
-  font-size: $dsk-btn-fs;
-
-  @include respond(laptops) {
-    font-size: $lap-btn-fs;
-  }
-
-  @include respond(xl) {
-    font-size: $xl-btn-fs;
-  }
-
-  @include respond(lg) {
-    font-size: $ipro-btn-fs;
-  }
-
-  @include respond(xs) {
-    font-size: $mob-btn-fs;
-  }
+  font-size: 2rem;
 }
 
 %border-1-fs {
@@ -266,16 +90,7 @@
   & *[class*="-h--1"] {
     @extend %headline-1-fs;
 
-    font-weight: $fw-light;
-    font-family: $font-2;
-    line-height: 1.1;
-  }
-
-  & *[class*="-h--2"] {
-    @extend %headline-2-fs;
-
-    font-weight: $fw-book;
-    font-family: $font-2;
+    font-weight: $fw-semi-bold;
   }
 
   /* --------------------
@@ -284,51 +99,37 @@
   & *[class*="-ah--1"] {
     @extend %article-headline-1-fs;
 
-    font-family: $font-2;
-    font-weight: $fw-light;
-    color: $color-3;
-    line-height: 1;
-  }
-
-  & *[class*="-ah--2"] {
-    @extend %article-headline-2-fs;
-
-    font-family: $font-2;
-    font-weight: $fw-book;
-    color: $color-1;
-
-    & + p {
-      margin-top: 2rem;
-    }
-  }
-
-  & *[class*="-ah--3"] {
-    @extend %article-headline-3-fs;
-
     font-weight: $fw-bold;
+    color: #000;
+    line-height: 1;
   }
 
   /* --------------------
       Paragraphs
   ----------------- */
+  & *[class*="-p--"] {
+    line-height: 1.5;
+  }
+
   & *[class*="-p--1"] {
     @extend %para-1-fs;
-
-    color: $text-color;
   }
 
   & *[class*="-p--2"] {
     @extend %para-2-fs;
+
+    font-weight: $fw-semi-bold
   }
 
   & *[class*="-p--3"] {
     @extend %para-3-fs;
   }
 
-  & *[class*="-p--4"] {
-    @extend %para-4-fs;
-
-    font-family: $font-2;
+  /* --------------------
+      Buttons
+  ----------------- */
+  & *[class*="-btn--1"] {
+    @extend %btn-1-fs;
   }
 
   & *[class*="disclaimer"] {
