@@ -89,8 +89,6 @@
 
   & *[class*="-h--1"] {
     @extend %headline-1-fs;
-
-    font-weight: $fw-semi-bold;
   }
 
   /* --------------------
@@ -98,10 +96,6 @@
   ----------------- */
   & *[class*="-ah--1"] {
     @extend %article-headline-1-fs;
-
-    font-weight: $fw-bold;
-    color: #000;
-    line-height: 1;
   }
 
   /* --------------------
@@ -117,8 +111,6 @@
 
   & *[class*="-p--2"] {
     @extend %para-2-fs;
-
-    font-weight: $fw-semi-bold
   }
 
   & *[class*="-p--3"] {

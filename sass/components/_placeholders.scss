@@ -12,3 +12,21 @@
     padding-bottom: $mob-padding-y;
   }
 }
+
+%image-animation {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+%article-not-last-margin {
+  & > *:not(:first-child):not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+%space-between-widgets-y {
+  margin-bottom: 3rem;
+}

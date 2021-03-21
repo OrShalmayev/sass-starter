@@ -76,33 +76,3 @@ $box-shadow--1: 0 8px 15px rgba(51, 51, 51, 0.2);
 
 $p-margin-b: 2rem;
 $elm-margin-y: 2rem;
-
-%image-animation {
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-}
-
-%article-not-last-margin {
-  & > *:not(:first-child):not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
-%space-between-widgets-y {
-  margin-bottom: 3rem;
-}
-
-@mixin left-line($width: 7px, $height: 50px, $bgc: $color-1) {
-  content: "";
-  position: absolute;
-  width: $width;
-  height: $height;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: $bgc;
-}
-
